@@ -49,7 +49,7 @@ export default function ListPage() {
             <h2>{list.length} found</h2>
             <form className='my-5' action="">
                 <input ref={itemName} type="text" className='border border-indigo-500 rounded focus:border-indigo-400 focus:outline-none focus:ring-2' />
-                <button onClick={addItem} className='px-2 mx-2 text-white bg-indigo-500 rounded'>Add</button>
+                <button onClick={addItem} className='px-2 mx-2 text-white bg-indigo-500 rounded hover:bg-indigo-700'>Add</button>
             </form>
             <List list={list} removeItem={removeItem} />
         </div>
