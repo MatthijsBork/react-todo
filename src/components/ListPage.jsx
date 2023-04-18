@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import List from './List';
-import { v4 as uuid } from 'uuid';
 
 const LOCAL_STORAGE_KEY = 'todoApp.list';
 
@@ -30,7 +29,7 @@ export default function ListPage() {
         const name = itemName.current.value;
         if (name === '') return
         setList(oldList => {
-            return [...oldList, { id: uuid(), name: name }];
+            return [...oldList, { id: Date.now(), name: name }];
         })
         itemName.current.value = null;
     }
